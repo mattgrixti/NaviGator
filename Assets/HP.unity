@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 27554769}
   - 222: {fileID: 27554768}
-  - 114: {fileID: 27554767}
   m_Layer: 5
   m_Name: Heart
   m_TagString: Untagged
