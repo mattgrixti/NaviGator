@@ -17,6 +17,7 @@ public class MainMenuScript : MonoBehaviour {
     {
         //Start New Game jump to scene 1
         mainMenu.SetActive(false);
+        Application.LoadLevel(1);
     }
     public void options_onClick()
     {
