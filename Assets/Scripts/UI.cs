@@ -18,6 +18,9 @@ public class UI : MonoBehaviour
         HeartUI.sprite = heartSprite[HP];
         PointsUI.text = Points.ToString();
         LevelUI.text = levelPrefix + Level.ToString();
+        GameControl.control.PlayerHealth = HP;
+        GameControl.control.PlayerScore = Points;
+        GameControl.control.PlayerLevel = Level;
     }
 }
 
