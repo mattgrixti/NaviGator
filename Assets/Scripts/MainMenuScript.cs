@@ -23,4 +23,8 @@ public class MainMenuScript : MonoBehaviour {
     {
         //Option pop-up here
     }
+    public void quit_onClick()
+    {
+        Application.Quit();
+    }
 }

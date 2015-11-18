@@ -5,7 +5,6 @@ public class PauseScreen : MonoBehaviour {
 
     // Use this for initialization
     public GameObject pauseCanvas;
-    public GameObject mainMenu;
     private bool pauseState = false;
 	void Start () {
 	    
@@ -38,13 +37,11 @@ public class PauseScreen : MonoBehaviour {
 
     public void restart_onClick()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     public void mainMenu_onClick()
     {
-        pauseCanvas.SetActive(false);
-        mainMenu.SetActive(true);
+        Application.LoadLevel(0);
     }
-
 }
