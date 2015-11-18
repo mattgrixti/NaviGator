@@ -44,5 +44,4 @@ public class PauseScreen : MonoBehaviour {
     {
         Application.LoadLevel(0);
     }
-
 }

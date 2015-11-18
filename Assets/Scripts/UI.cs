@@ -22,5 +22,17 @@ public class UI : MonoBehaviour
         GameControl.control.PlayerScore = Points;
         GameControl.control.PlayerLevel = Level;
     }
+
+    public void save_onClick()
+    {
+        GameControl.control.Save();
+    }
+    public void load_onClick()
+    {
+        GameControl.control.Load();
+        HP = GameControl.control.PlayerHealth;
+        Points = GameControl.control.PlayerScore;
+        Level = GameControl.control.PlayerLevel;
+    }
 }
 
