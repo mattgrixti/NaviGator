@@ -2,11 +2,9 @@
 using System.Collections;
 
 public class MainScript : MonoBehaviour {
-    public GameObject pauseUI;
     public GameObject mainMenuUI;
 	// Use this for initialization
 	void Start () {
-        pauseUI.SetActive(false);
         mainMenuUI.SetActive(true);
     }
 	
@@ -15,8 +13,5 @@ public class MainScript : MonoBehaviour {
     }
 
  
-    public void quit_onClick()
-    {
-        Application.Quit();
-    }
+
 }
