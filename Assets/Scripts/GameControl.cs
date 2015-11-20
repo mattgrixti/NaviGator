@@ -13,6 +13,9 @@ public class GameControl : MonoBehaviour
     private int playerHealth;
     private int playerScore;
     private int playerLevel;
+    private float scoreTimer;
+    private float scoreTimerTrigger;
+    private float scoreMultiplier;
 
     //this checks to see if game objects exists anywhere...
     //if it does delete and if it doenst MAKE THIS the game control
@@ -35,7 +38,7 @@ public class GameControl : MonoBehaviour
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.navi");
 
-        PlayerData data = new PlayerData(PlayerHealth, PlayerLevel, PlayerScore);
+        PlayerData data = new PlayerData(PlayerHealth, PlayerLevel, PlayerScore,scoreTimer, scoreTimerTrigger, scoreMultiplier);
         bf.Serialize(file, data);
         file.Close();
     }
@@ -53,7 +56,10 @@ public class GameControl : MonoBehaviour
             PlayerHealth = data.health;
             PlayerLevel = data.level;
             PlayerScore = data.score;
-        }
+            ScoreMultiplier = data.ScoreMultiplier;
+            ScoreTimerTrigger = data.ScoreTimerTrigger;
+            ScoreTimer = data.ScoreTimer;
+}
     }
 
 
@@ -95,6 +101,58 @@ public class GameControl : MonoBehaviour
             playerLevel = value;
         }
     }
+
+    public float ScoreTimer
+    {
+        get
+        {
+            return scoreTimer;
+        }
+
+        set
+        {
+            scoreTimer = value;
+        }
+    }
+
+    public float ScoreTimerTrigger
+    {
+        get
+        {
+            return scoreTimerTrigger;
+        }
+
+        set
+        {
+            scoreTimerTrigger = value;
+        }
+    }
+
+    public float ScoreMultiplier
+    {
+        get
+        {
+            return scoreMultiplier;
+        }
+
+        set
+        {
+            scoreMultiplier = value;
+        }
+    }
+
+    public float CurrentTime
+    {
+        get
+        {
+            return currentTime;
+        }
+
+        set
+        {
+            currentTime = value;
+        }
+    }
 }
 
 [Serializable]
@@ -103,6 +161,20 @@ class PlayerData
     public int health;
     public int level;
     public int score;
+    public float ScoreTimer;
+    public float ScoreTimerTrigger;
+    public float ScoreMultiplier;
+
+    public PlayerData(int health, int level, int score, float ScoreTimer, float ScoreTimerTrigger, float ScoreMultiplier)
+    {
+        this.health = health;
+        this.level = level;
+        this.score = score;
+        this.ScoreTimer = ScoreTimer;
+        this.ScoreTimerTrigger = ScoreTimerTrigger;
+        this.ScoreMultiplier = ScoreMultiplier;
+    }
+
     public PlayerData (int health, int level, int score)
     {
         this.health = health;

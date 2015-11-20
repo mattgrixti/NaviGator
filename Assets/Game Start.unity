@@ -521,7 +521,7 @@ GameObject:
   - 4: {fileID: 1188637160}
   - 82: {fileID: 1188637159}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
