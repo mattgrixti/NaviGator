@@ -141,18 +141,6 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public float CurrentTime
-    {
-        get
-        {
-            return currentTime;
-        }
-
-        set
-        {
-            currentTime = value;
-        }
-    }
 }
 
 [Serializable]
