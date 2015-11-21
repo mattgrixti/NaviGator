@@ -16,6 +16,7 @@ public class GameControl : MonoBehaviour
     private float scoreTimer;
     private float scoreTimerTrigger;
     private float scoreMultiplier;
+    private bool timeBasedScore;
 
     //this checks to see if game objects exists anywhere...
     //if it does delete and if it doenst MAKE THIS the game control
@@ -141,6 +142,18 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    public bool TimeBasedScore
+    {
+        get
+        {
+            return timeBasedScore;
+        }
+
+        set
+        {
+            timeBasedScore = value;
+        }
+    }
 }
 
 [Serializable]
