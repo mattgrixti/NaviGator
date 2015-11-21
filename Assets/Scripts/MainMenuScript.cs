@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour {
     public GameObject mainMenu;
     public GameObject optionPanel;
+    public Dropdown dropDownGraphics;
+    public Toggle fullScreenGraphics;
+    public Toggle sound;
+    public AudioSource bgMusic;
     private bool toogleValue = false;
 	// Use this for initialization
 	void Start () {
@@ -46,4 +51,51 @@ public class MainMenuScript : MonoBehaviour {
     {
         optionPanel.SetActive(false);
     }
+    public void graphicsChange()
+    {
+        int resolutionChange = dropDownGraphics.value;
+        int width = 1280;
+        int height = 960;
+        bool isFullScreen;
+        switch(resolutionChange)
+        {
+            case 0:
+                width = 1920;
+                height = 1080;
+                break;
+
+            case 1:
+                width = 1600;
+                height = 1024;
+                break;
+            case 2:
+                width = 1280;
+                height = 960;
+                break;
+            case 3:
+                width = 1024;
+                height = 768;
+                break;
+            case 4:
+                width = 800;
+                height = 600;
+                break;
+            default:
+                width = 1600;
+                height = 1024;
+                break;
+        }
+        isFullScreen = fullScreenGraphics.isOn;
+        Screen.SetResolution(width, height, isFullScreen);
+
+    }
+
+    public void OnValueChangeSound()
+    {
+        if (sound.isOn == false)
+            bgMusic.enabled = false;
+        else
+            bgMusic.enabled = true;
+    }
+    
 }
