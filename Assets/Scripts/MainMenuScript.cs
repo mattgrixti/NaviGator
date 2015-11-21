@@ -93,9 +93,14 @@ public class MainMenuScript : MonoBehaviour {
     public void OnValueChangeSound()
     {
         if (sound.isOn == false)
+        {
             bgMusic.enabled = false;
+        }
         else
+        {
             bgMusic.enabled = true;
+        }
+        GameControl.control.SoundMute = sound.isOn;
     }
     
 }
