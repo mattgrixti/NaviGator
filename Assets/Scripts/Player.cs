@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
     
-    public float maxspeed = 10f;          	//maximum character speed
+    public float maxspeed = 20f;          	//maximum character speed
     public bool facingRight = true;			// For determining which way the player is currently facing.
 
     private Rigidbody2D rb2D;               //access to rigidbody
     private Animator animator;              //access to animator
 
-    public float jumpForce = 1000f;         //force of jump
+    public float jumpForce = 2f;         //force of jump
     public Transform groundCheck;           //gets the groundcheck gameobject that we will use
     public bool grounded = false;           //is on the ground
     public bool jump = false;              	//is jumping or not
@@ -28,6 +28,11 @@ public class Player : MonoBehaviour {
     {
         //checks if character is on the ground or not to switch the grounded bool on and off. It checks if the variable is touching the ground
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Floor"));
+
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            jump = true;
+        }
     }
 
     void FixedUpdate()
@@ -51,11 +56,7 @@ public class Player : MonoBehaviour {
             {
                 //the force here is greater to surpass gravity
                 vertical = 5.5f;
-            }
-            else if (grounded == true && animator.GetBool("isStair") == false)
-            {
-                jump = true;
-            }
+            }          
 
         }
         if (Input.GetAxisRaw("Horizontal") < 0)
@@ -83,7 +84,7 @@ public class Player : MonoBehaviour {
             animator.SetBool("isMoving", true);
         else
             animator.SetBool("isMoving", false);
-
+        
         //jumping
         if (jump)
         {
