@@ -14,6 +14,10 @@ public class Player : MonoBehaviour {
     public bool grounded = false;           //is on the ground
     public bool jump = false;              	//is jumping or not
 
+    public bool onLadder;                   //player is in ladder zone
+    public float climbSpeed;               //climb speed of player
+    private float climbVelocity;            //
+    private float gravityStore;             //keeps player from being pulled back to the ground by gravity while on ladder
 
     // Use this for initialization
     protected virtual void Start()
@@ -22,6 +26,9 @@ public class Player : MonoBehaviour {
         rb2D = GetComponent<Rigidbody2D>();
         //gets the animation control of the character
         animator = GetComponent<Animator>();
+
+        //store current player gravity for when player leaves the ladder (to reset)
+        gravityStore = rb2D.gravityScale;
     }
 
     void Update()
@@ -33,6 +40,22 @@ public class Player : MonoBehaviour {
         {
             jump = true;
         }
+
+        //when the player is in the zone, if player presses up the climb velocity will be changed, if no button, no change
+        if (onLadder)
+        {
+            //animator.SetTrigger("Climb");
+            rb2D.gravityScale = 0f;
+
+            climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
+
+            rb2D.velocity = new Vector2(rb2D.velocity.x, climbVelocity);
+        }
+
+        if (!onLadder)
+        {
+            rb2D.gravityScale = gravityStore;
+        }
     }
 
     void FixedUpdate()
@@ -42,23 +65,23 @@ public class Player : MonoBehaviour {
 
         //checks what key got pressed down and moves character accordingly
         //isStair is a control, checking if the character is touching the stairs to be able to go up or down.
-        if (Input.GetAxisRaw("Vertical") < 0)
-        {
-            if (animator.GetBool("isStair") == true)
-            {
-                //the force here is lesser because gravity will do most of the work
-                vertical = -0.5f;
-            }
-        }
-        if (Input.GetAxisRaw("Vertical") > 0)
-        {
-            if (animator.GetBool("isStair") == true)
-            {
-                //the force here is greater to surpass gravity
-                vertical = 5.5f;
-            }          
+        //if (Input.GetAxisRaw("Vertical") < 0)
+        //{
+        //    if (animator.GetBool("isStair") == true)
+        //    {
+        //        the force here is lesser because gravity will do most of the work
+        //        vertical = -0.5f;
+        //    }
+        //}
+        //if (Input.GetAxisRaw("Vertical") > 0)
+        //{
+        //    if (animator.GetBool("isStair") == true)
+        //    {
+        //        the force here is greater to surpass gravity
+        //        vertical = 5.5f;
+        //    }
 
-        }
+        //}
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             //if (animator.GetBool("isStair") == false)
