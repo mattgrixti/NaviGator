@@ -20,8 +20,8 @@ namespace UnityStandardAssets.Utility
 		[SerializeField]
 		private float heightDamping;
 
-		// Use this for initialization
-		void Start() { }
+        // Use this for initialization
+        void Start() { }
 
 		// Update is called once per frame
 		void LateUpdate()
@@ -52,7 +52,7 @@ namespace UnityStandardAssets.Utility
 			transform.position -= currentRotation * Vector3.forward * distance;
 
 			// Set the height of the camera
-			transform.position = new Vector3(transform.position.x ,currentHeight , transform.position.z);
+			transform.position = new Vector3(transform.position.x, currentHeight , transform.position.z);
 
 			// Always look at the target
 			transform.LookAt(target);
