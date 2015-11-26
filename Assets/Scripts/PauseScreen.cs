@@ -37,6 +37,8 @@ public class PauseScreen : MonoBehaviour {
 
     public void restart_onClick()
     {
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1;
         Application.LoadLevel(Application.loadedLevel);
     }
 
