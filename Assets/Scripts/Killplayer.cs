@@ -11,14 +11,14 @@ public class Killplayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+    }
 
     void OnTriggerEnter2d(Collider2D other)
     {
-        if(other.name == "Navi")
+        Debug.Log("Contact with Player");
+        if (other.name == "Navi")
         {
-            levelManager.RespawnPlayer();
+            
         }
     }
 }

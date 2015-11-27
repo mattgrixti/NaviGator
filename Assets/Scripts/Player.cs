@@ -171,9 +171,6 @@ public class Player : MonoBehaviour {
             animator.SetBool("isStair", false);
         }
 
-        if (other.tag == "Enemy")
-        {
-            levelManager.RespawnPlayer();
-        }
+        
     }
 }
