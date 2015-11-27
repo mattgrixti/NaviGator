@@ -12,7 +12,7 @@ GameObject:
   - 95: {fileID: 9599318}
   - 61: {fileID: 6179828}
   - 50: {fileID: 5073900}
-  - 114: {fileID: 11465104}
+  - 114: {fileID: 11432078}
   m_Layer: 0
   m_Name: Navi
   m_TagString: Player
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.2700005, y: -3.90199995, z: .083984375}
+  m_LocalPosition: {x: -3.4265573, y: -4.33145809, z: .083984375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454068}
@@ -75,7 +75,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6179828
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -106,7 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11465104
+--- !u!114 &11432078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,15 +114,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 128328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e598bba273b9b47b50aa8eecc04398, type: 3}
+  m_Script: {fileID: 11500000, guid: d16f83d9709041a48a15d59ecfe1ec2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxspeed: 4
+  maxspeed: 20
   facingRight: 1
-  jumpForce: 1000
+  jumpForce: 350
   groundCheck: {fileID: 454068}
   grounded: 0
   jump: 0
+  onLadder: 0
+  climbSpeed: 5
 --- !u!212 &21203076
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -145,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1805794089
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -163,6 +165,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LinearDrag
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

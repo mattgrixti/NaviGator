@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
     private float climbVelocity;            //
     private float gravityStore;             //keeps player from being pulled back to the ground by gravity while on ladder
 
+    private LevelManeger levelManager;
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour {
 
         //store current player gravity for when player leaves the ladder (to reset)
         gravityStore = rb2D.gravityScale;
+
+        levelManager = levelManager = FindObjectOfType<LevelManeger>();
     }
 
     void Update()
@@ -165,6 +169,11 @@ public class Player : MonoBehaviour {
         if (other.tag == "notStairs")
         {
             animator.SetBool("isStair", false);
+        }
+
+        if (other.tag == "Enemy")
+        {
+            levelManager.RespawnPlayer();
         }
     }
 }
