@@ -16,9 +16,6 @@ public class UI : MonoBehaviour
     public float ScoreMultiplier;
     private string levelPrefix = "Level: ";
 
-    void start()
-    {
-    }
    void Update ()
     {
         HeartUI.sprite = heartSprite[HP];
@@ -34,6 +31,8 @@ public class UI : MonoBehaviour
             GameControl.control.ScoreMultiplier = ScoreMultiplier;
             getScoreTimed();
         }
+        if (HP == 0)
+            GameControl.control.lose();
         
     }
 

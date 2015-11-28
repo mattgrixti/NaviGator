@@ -12,8 +12,8 @@ public class MainMenuScript : MonoBehaviour {
     private bool toogleValue = false;
 	// Use this for initialization
 	void Start () {
-	
-	}
+        GameControl.control.TimeBasedScore = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +24,7 @@ public class MainMenuScript : MonoBehaviour {
     {
         //Start New Game jump to scene 1
         mainMenu.SetActive(false);
+
         Application.LoadLevel(1);
     }
     public void options_onClick()

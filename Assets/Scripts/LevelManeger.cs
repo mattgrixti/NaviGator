@@ -20,4 +20,8 @@ public class LevelManeger : MonoBehaviour {
         Debug.Log("Player Respawed");
         player.transform.position = currentCheckpoint.transform.position;
     }
+    public void gameOver()
+    {
+
+    }
 }

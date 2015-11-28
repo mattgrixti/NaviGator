@@ -171,6 +171,15 @@ public class Player : MonoBehaviour {
             animator.SetBool("isStair", false);
         }
 
-        
+        if (other.tag == "Enemy")
+        {
+            if (grounded)
+            {
+                levelManager.RespawnPlayer();
+                GameObject go = GameObject.Find("mainObject");
+                UI ui = go.GetComponent<UI>();
+                ui.HP -= 1;
+            }
+        }
     }
 }
