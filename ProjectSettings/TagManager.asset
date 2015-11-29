@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,11 +15,11 @@ TagManager:
   - 
   - 
   - 
+  - Floor
+  - Background
   - 
   - 
-  - 
-  - 
-  - 
+  - Level Asset
   - 
   - 
   - 
@@ -38,6 +39,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4077194545
+    locked: 0
+  - name: Floors
+    uniqueID: 2916847549
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ladders
+    uniqueID: 920228217
+    locked: 0
+  - name: Units
+    uniqueID: 1964603949
+    locked: 0
+  - name: Player
+    uniqueID: 1499717509
+    locked: 0
+  - name: Overlay
+    uniqueID: 4089846529
     locked: 0
