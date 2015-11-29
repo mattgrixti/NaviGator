@@ -19,17 +19,18 @@ public class Killplayer : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Navi")
-        {
-            Player playerData = player.GetComponent<Player>();
-            if (playerData.grounded == false)
-            {
-                Destroy(this.gameObject);
-                GameObject go = GameObject.Find("mainObject");
-                UI ui = go.GetComponent<UI>();
-                GameControl.control.AddPoint();
-            }
-        }
+        //to be deleted. Replaced with HurtEnemyOnContact script
+        //if (other.name == "Navi")
+        //{
+        //    Player playerData = player.GetComponent<Player>();
+        //    if (playerData.grounded == false)
+        //    {
+        //        Destroy(this.gameObject);
+        //        GameObject go = GameObject.Find("mainObject");
+        //        UI ui = go.GetComponent<UI>();
+        //        GameControl.control.AddPoint();
+        //    }
+        //}
     }
     
 }
