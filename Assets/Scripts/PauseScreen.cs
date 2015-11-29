@@ -44,6 +44,7 @@ public class PauseScreen : MonoBehaviour {
 
     public void mainMenu_onClick()
     {
+        Time.timeScale = 1;
         Application.LoadLevel(0);
     }
 }

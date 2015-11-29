@@ -19,7 +19,7 @@ public class GameControl : MonoBehaviour
     private bool timeBasedScore;
     private bool soundMute;
     private bool playerWin;
-
+    private Vector3 playerPosition;
     //this checks to see if game objects exists anywhere...
     //if it does delete and if it doenst MAKE THIS the game control
     //singleton ish behavior
@@ -200,6 +200,19 @@ public class GameControl : MonoBehaviour
         set
         {
             playerWin = value;
+        }
+    }
+
+    public Vector3 PlayerPosition
+    {
+        get
+        {
+            return playerPosition;
+        }
+
+        set
+        {
+            playerPosition = value;
         }
     }
 }

@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
     public float ScoreMultiplier;
     private string levelPrefix = "Level: ";
 
-   void Update ()
+    void Update ()
     {
         HeartUI.sprite = heartSprite[HP];
         PointsUI.text = Points.ToString();
@@ -42,7 +42,6 @@ public class UI : MonoBehaviour
     }
     public void load_onClick()
     {
-        
         GameControl.control.Load();
         HP = GameControl.control.PlayerHealth;
         Points = GameControl.control.PlayerScore;

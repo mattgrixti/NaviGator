@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
         //store current player gravity for when player leaves the ladder (to reset)
         gravityStore = rb2D.gravityScale;
 
-        levelManager = levelManager = FindObjectOfType<LevelManeger>();
+        levelManager = FindObjectOfType<LevelManeger>();
     }
 
     void Update()
