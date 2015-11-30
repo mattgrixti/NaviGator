@@ -48,7 +48,6 @@ public class Player : MonoBehaviour {
         //when the player is in the zone, if player presses up the climb velocity will be changed, if no button, no change
         if (onLadder)
         {
-            //animator.SetTrigger("Climb");
             rb2D.gravityScale = 0f;
 
             climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
@@ -164,12 +163,6 @@ public class Player : MonoBehaviour {
         {
             animator.SetBool("isStair", true);
         }
-        //checks if the tag of the trigger collided with is the barrier
-        //this barrier exists to tell the game that the player is now off the stairs and can no longer go up or down
-        if (other.tag == "notStairs")
-        {
-            animator.SetBool("isStair", false);
-        }
 
         if (other.tag == "Enemy")
         {
@@ -180,6 +173,14 @@ public class Player : MonoBehaviour {
                 UI ui = go.GetComponent<UI>();
                 ui.HP -= 1;
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) 
+    { 
+        if (other.tag == "Stairs")
+        {
+            animator.SetBool("isStair", false);
         }
     }
 }
