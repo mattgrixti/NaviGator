@@ -18,7 +18,8 @@ public class GameControl : MonoBehaviour
     private float scoreMultiplier;
     private bool timeBasedScore;
     private bool soundMute;
-
+    private bool playerWin;
+    private Vector3 playerPosition;
     //this checks to see if game objects exists anywhere...
     //if it does delete and if it doenst MAKE THIS the game control
     //singleton ish behavior
@@ -32,6 +33,16 @@ public class GameControl : MonoBehaviour
         else if (control != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void AddPoint()
+    {
+        GameObject go = GameObject.Find("mainObject");
+        UI ui = go.GetComponent<UI>();
+        if (timeBasedScore == false)
+        {
+            ui.Points += 50;
         }
     }
 
@@ -63,7 +74,17 @@ public class GameControl : MonoBehaviour
             ScoreTimer = data.ScoreTimer;
 }
     }
-
+    public void win()
+    {
+        PlayerWin = true;
+        Application.LoadLevel(2);
+    }
+    public void lose()
+    {
+        PlayerWin = false;
+        PlayerScore = 0;
+        Application.LoadLevel(2);
+    }
 
     public int PlayerHealth
     {
@@ -166,6 +187,32 @@ public class GameControl : MonoBehaviour
         set
         {
             soundMute = value;
+        }
+    }
+
+    public bool PlayerWin
+    {
+        get
+        {
+            return playerWin;
+        }
+
+        set
+        {
+            playerWin = value;
+        }
+    }
+
+    public Vector3 PlayerPosition
+    {
+        get
+        {
+            return playerPosition;
+        }
+
+        set
+        {
+            playerPosition = value;
         }
     }
 }

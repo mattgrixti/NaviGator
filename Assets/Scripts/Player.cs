@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
     private float climbVelocity;            //
     private float gravityStore;             //keeps player from being pulled back to the ground by gravity while on ladder
 
+    private LevelManeger levelManager;
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour {
 
         //store current player gravity for when player leaves the ladder (to reset)
         gravityStore = rb2D.gravityScale;
+
+        levelManager = FindObjectOfType<LevelManeger>();
     }
 
     void Update()
@@ -44,7 +48,6 @@ public class Player : MonoBehaviour {
         //when the player is in the zone, if player presses up the climb velocity will be changed, if no button, no change
         if (onLadder)
         {
-            //animator.SetTrigger("Climb");
             rb2D.gravityScale = 0f;
 
             climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
@@ -160,9 +163,22 @@ public class Player : MonoBehaviour {
         {
             animator.SetBool("isStair", true);
         }
-        //checks if the tag of the trigger collided with is the barrier
-        //this barrier exists to tell the game that the player is now off the stairs and can no longer go up or down
-        if (other.tag == "notStairs")
+
+        if (other.tag == "Enemy")
+        {
+            if (grounded)
+            {
+                levelManager.RespawnPlayer();
+                GameObject go = GameObject.Find("mainObject");
+                UI ui = go.GetComponent<UI>();
+                ui.HP -= 1;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) 
+    { 
+        if (other.tag == "Stairs")
         {
             animator.SetBool("isStair", false);
         }
