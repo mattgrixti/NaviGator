@@ -21,9 +21,10 @@ public class HurtEnemyOnContact : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "EnemyHead")
         {
-            animator = other.GetComponent<Animator>();
+            animator = other.GetComponentInParent<Animator>();
+            //animator = other.GetComponent<Animator>();
             animator.SetBool("isSquished", true);
 
             rb2d.velocity = new Vector2(rb2d.velocity.x, bounceOnEnemy);

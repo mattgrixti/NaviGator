@@ -166,13 +166,13 @@ public class Player : MonoBehaviour {
 
         if (other.tag == "Enemy")
         {
-            if (grounded)
-            {
+            //if (grounded)
+            //{
                 levelManager.RespawnPlayer();
                 GameObject go = GameObject.Find("mainObject");
                 UI ui = go.GetComponent<UI>();
                 ui.HP -= 1;
-            }
+            //}
         }
     }
 
