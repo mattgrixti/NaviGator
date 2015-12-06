@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &126566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 436332}
+  - 61: {fileID: 6149296}
+  m_Layer: 0
+  m_Name: MinionHead
+  m_TagString: EnemyHead
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &198522
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +29,8 @@ GameObject:
   - 50: {fileID: 5089648}
   - 58: {fileID: 5828150}
   - 114: {fileID: 11499846}
-  - 114: {fileID: 11436170}
+  - 95: {fileID: 9596648}
+  - 114: {fileID: 11444450}
   m_Layer: 0
   m_Name: Minions_small
   m_TagString: Enemy
@@ -30,8 +47,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.51000023, y: 1.11000001, z: 0}
   m_LocalScale: {x: .223110348, y: .223110348, z: .223110348}
-  m_Children: []
+  m_Children:
+  - {fileID: 436332}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &436332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 429978}
   m_RootOrder: 0
 --- !u!50 &5089648
 Rigidbody2D:
@@ -62,6 +92,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!61 &6149296
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126566}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -.519999981, y: 1.98000002}
+  serializedVersion: 2
+  m_Size: {x: 1.33000004, y: .790000021}
 --- !u!61 &6172974
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -75,7 +118,24 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.9000001, y: 4.38000011}
---- !u!114 &11436170
+--- !u!95 &9596648
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198522}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94d9c4026d34af44fb10365133a66eac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11444450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,11 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 198522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a98c8a3cac2e740b8ee6b2d4534494, type: 3}
+  m_Script: {fileID: 11500000, guid: 95a385b75be2cc540b153c5b5117910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
-  enemy: {fileID: 198522}
 --- !u!114 &11499846
 MonoBehaviour:
   m_ObjectHideFlags: 1
