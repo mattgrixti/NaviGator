@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Stairs
+  - notStairs
+  - Floor
   layers:
   - Default
   - TransparentFX
