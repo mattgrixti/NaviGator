@@ -144,10 +144,6 @@ Prefab:
       propertyPath: m_Size.x
       value: .883186102
       objectReference: {fileID: 0}
-    - target: {fileID: 141438, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
   m_IsPrefabParent: 0
@@ -295,9 +291,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -962,10 +956,6 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: -1378119747
       objectReference: {fileID: 0}
-    - target: {fileID: 141438, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
   m_IsPrefabParent: 0
@@ -1218,10 +1208,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 153386, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6190098, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
@@ -1284,10 +1270,6 @@ Prefab:
     - target: {fileID: 6149108, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
       propertyPath: m_Size.x
       value: .883185923
-      objectReference: {fileID: 0}
-    - target: {fileID: 141438, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
@@ -1494,9 +1476,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1670,18 +1650,6 @@ Prefab:
       propertyPath: m_Size.x
       value: 3.40617132
       objectReference: {fileID: 0}
-    - target: {fileID: 192854, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
-    - target: {fileID: 162900, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
-    - target: {fileID: 126976, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6155932, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
@@ -1808,9 +1776,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2262,7 +2228,7 @@ GameObject:
   - 4: {fileID: 832832468}
   m_Layer: 0
   m_Name: Logs and Wood
-  m_TagString: Floor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,10 +2350,6 @@ Prefab:
     - target: {fileID: 422394, guid: d6c635e740cb54847a6262f216c91beb, type: 2}
       propertyPath: m_LocalScale.x
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 186490, guid: d6c635e740cb54847a6262f216c91beb, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c635e740cb54847a6262f216c91beb, type: 2}
@@ -2513,10 +2475,6 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: -1378119747
       objectReference: {fileID: 0}
-    - target: {fileID: 128854, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
   m_IsPrefabParent: 0
@@ -2579,10 +2537,6 @@ Prefab:
       propertyPath: m_Size.x
       value: .881919026
       objectReference: {fileID: 0}
-    - target: {fileID: 141438, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
   m_IsPrefabParent: 0
@@ -2636,10 +2590,6 @@ Prefab:
     - target: {fileID: 6190098, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
       propertyPath: m_Size.x
       value: 1.60071421
-      objectReference: {fileID: 0}
-    - target: {fileID: 153386, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1016863cd54d4f544b8c6736d39a2914, type: 2}
@@ -2761,10 +2711,6 @@ Prefab:
     - target: {fileID: 6155932, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
       propertyPath: m_UsedByEffector
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192854, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6182002, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
@@ -3012,10 +2958,6 @@ Prefab:
       propertyPath: m_Size.x
       value: 3.36240602
       objectReference: {fileID: 0}
-    - target: {fileID: 192854, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6155932, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
@@ -3063,66 +3005,9 @@ Prefab:
       propertyPath: m_Name
       value: Wood1
       objectReference: {fileID: 0}
-    - target: {fileID: 186490, guid: d6c635e740cb54847a6262f216c91beb, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c635e740cb54847a6262f216c91beb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1120065446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1120065447}
-  - 61: {fileID: 1120065449}
-  - 114: {fileID: 1120065448}
-  m_Layer: 0
-  m_Name: EdgeDetectorR
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1120065447
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1120065446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4000001, y: -3.20000005, z: 0}
-  m_LocalScale: {x: 1.75867641, y: 1.95242584, z: 1.52272511}
-  m_Children: []
-  m_Father: {fileID: 1978544590}
-  m_RootOrder: 0
---- !u!114 &1120065448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1120065446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c760b72894e10748923dda5bfc03dd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1120065449
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1120065446}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!4 &1120460355 stripped
 Transform:
   m_PrefabParentObject: {fileID: 494860, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
@@ -3177,9 +3062,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3540,10 +3423,6 @@ Prefab:
       propertyPath: m_Size.x
       value: 3.44993496
       objectReference: {fileID: 0}
-    - target: {fileID: 192854, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6155932, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
@@ -3634,9 +3513,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3848,10 +3725,6 @@ Prefab:
     - target: {fileID: 6149108, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
       propertyPath: m_Size.x
       value: .924969316
-      objectReference: {fileID: 0}
-    - target: {fileID: 141438, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc2b65ff1e2556499997c3a313a0116, type: 2}
@@ -4213,9 +4086,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -4300,10 +4171,6 @@ Prefab:
       propertyPath: m_ColliderMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 128854, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
   m_IsPrefabParent: 0
@@ -4345,10 +4212,6 @@ Prefab:
     - target: {fileID: 408228, guid: c96b2d4e9b73ec64fbde5cd0e2c197c1, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 194900, guid: c96b2d4e9b73ec64fbde5cd0e2c197c1, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c96b2d4e9b73ec64fbde5cd0e2c197c1, type: 2}
@@ -4573,7 +4436,7 @@ GameObject:
   - 251: {fileID: 1884250791}
   m_Layer: 9
   m_Name: Logs3
-  m_TagString: Floor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4627,9 +4490,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -4833,10 +4694,6 @@ Prefab:
     - target: {fileID: 6182002, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
       propertyPath: m_Size.x
       value: 3.40616989
-      objectReference: {fileID: 0}
-    - target: {fileID: 192854, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6155932, guid: 03ba593b46ebce04d9bfa22c8880e01e, type: 2}

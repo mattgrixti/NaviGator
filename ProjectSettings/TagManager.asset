@@ -7,11 +7,7 @@ TagManager:
   - Enemy
   - Stairs
   - notStairs
-<<<<<<< HEAD
-  - Floor
-=======
   - EnemyHead
->>>>>>> origin/master
   layers:
   - Default
   - TransparentFX
