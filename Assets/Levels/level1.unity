@@ -210,6 +210,7 @@ GameObject:
   - 50: {fileID: 44255777}
   - 114: {fileID: 44255776}
   - 114: {fileID: 44255782}
+  - 95: {fileID: 44255783}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4658d1efce681f64888b98f9850bad36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 3
   moveRight: 0
   timeToTurn: 1.20000005
 --- !u!50 &44255777
@@ -291,7 +292,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -323,6 +326,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a385b75be2cc540b153c5b5117910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &44255783
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 44255775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &58117052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6149296, guid: b994870c62134d641be5c5191cdb2224, type: 2}
       propertyPath: m_Offset.y
-      value: 2.16000009
+      value: 2.3599999
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -1052,7 +1072,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.50999999, y: 2.05999994}
+  m_Offset: {x: -.50999999, y: 2.26999998}
   serializedVersion: 2
   m_Size: {x: 1.36000001, y: 1}
 --- !u!1001 &226925761
@@ -1476,7 +1496,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1776,7 +1798,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2077,7 +2101,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.529999971, y: 2.16000009}
+  m_Offset: {x: -.529999971, y: 2.38000011}
   serializedVersion: 2
   m_Size: {x: 1.47000003, y: .879999995}
 --- !u!4 &767897427
@@ -3062,7 +3086,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3176,7 +3202,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3513,7 +3541,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3776,7 +3806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6149296, guid: b994870c62134d641be5c5191cdb2224, type: 2}
       propertyPath: m_Offset.y
-      value: 2.28999996
+      value: 2.44000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b994870c62134d641be5c5191cdb2224, type: 2}
@@ -4086,7 +4116,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -4457,6 +4489,7 @@ PlatformEffector2D:
   m_SurfaceArc: 180
   m_UseSideFriction: 0
   m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!61 &1884250792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4490,7 +4523,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -4882,7 +4917,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -.49000001, y: 2.29999995}
+  m_Offset: {x: -.49000001, y: 2.4000001}
   serializedVersion: 2
   m_Size: {x: 1.26999998, y: .709999979}
 --- !u!1 &2041223388
