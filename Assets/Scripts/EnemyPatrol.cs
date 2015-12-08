@@ -15,7 +15,7 @@ public class EnemyPatrol : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         runningTimer += Time.deltaTime;
-        if (runningTimer >= (float) timeToTurn)
+        if (runningTimer >= timeToTurn)
         {
             moveRight = !moveRight;
             runningTimer = 0;

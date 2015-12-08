@@ -35,7 +35,11 @@ public class GameControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    void Start()
+    {
+        soundMute = true;
+        Debug.Log("Sound: " + GameControl.control.SoundMute);
+    }
     public void AddPoint()
     {
         GameObject go = GameObject.Find("mainObject");
