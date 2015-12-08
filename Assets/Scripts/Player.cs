@@ -45,14 +45,29 @@ public class Player : MonoBehaviour {
             jump = true;
         }
 
+        
+        if (Input.GetKey(KeyCode.UpArrow) && onLadder)
+        {
+            animator.SetBool("isStair", true);
+        }
+
         //when the player is in the zone, if player presses up the climb velocity will be changed, if no button, no change
         if (onLadder)
         {
-            rb2D.gravityScale = 0f;
+            if (animator.GetBool("isStair"))
+            {
+                rb2D.gravityScale = 0f;
 
-            climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
+                climbVelocity = climbSpeed * Input.GetAxisRaw("Vertical");
 
-            rb2D.velocity = new Vector2(rb2D.velocity.x, climbVelocity);
+                rb2D.velocity = new Vector2(rb2D.velocity.x, climbVelocity);
+            }
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                animator.SetBool("isStair", true);
+                animator.Play("climb");
+            }
         }
 
         if (!onLadder)
@@ -159,10 +174,10 @@ public class Player : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Check if the tag of the trigger collided with is stairs.
-        if (other.tag == "Stairs")
-        {
-            animator.SetBool("isStair", true);
-        }
+        //if (other.tag == "Stairs")
+        //{
+        //    animator.SetBool("isStair", true);
+        //}
 
         if (other.tag == "Enemy")
         {
@@ -178,9 +193,9 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D other) 
     { 
-        if (other.tag == "Stairs")
-        {
-            animator.SetBool("isStair", false);
-        }
+        //if (other.tag == "Stairs")
+        //{
+        //    animator.SetBool("isStair", false);
+        //}
     }
 }

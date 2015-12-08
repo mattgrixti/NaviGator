@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   moveRight: 0
-  timeToTurn: 1.20000005
+  timeToTurn: 3.0999999
 --- !u!50 &44255777
 Rigidbody2D:
   serializedVersion: 2
@@ -309,7 +309,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 44255775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.51000023, y: 22.7000008, z: 0}
+  m_LocalPosition: {x: 4.51000023, y: 22.6809998, z: 0}
   m_LocalScale: {x: .483750433, y: .483750433, z: .483750433}
   m_Children:
   - {fileID: 767897427}
@@ -335,7 +335,7 @@ Animator:
   m_GameObject: {fileID: 44255775}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c62bb3d26017ca74d99cfa4c17871a28, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4197,7 +4197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6135970, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
       propertyPath: m_Size.x
-      value: 2.924793
+      value: 3.07999992
       objectReference: {fileID: 0}
     - target: {fileID: 25142408, guid: 7723aaf9572d45045ab3b81a4be0d19f, type: 2}
       propertyPath: m_ColliderMask.m_Bits
