@@ -40,13 +40,13 @@ public class GameControl : MonoBehaviour
         soundMute = true;
         Debug.Log("Sound: " + GameControl.control.SoundMute);
     }
-    public void AddPoint()
+    public void AddPoint(int x)
     {
         GameObject go = GameObject.Find("mainObject");
         UI ui = go.GetComponent<UI>();
         if (timeBasedScore == false)
         {
-            ui.Points += 50;
+            ui.Points += x;
         }
     }
 

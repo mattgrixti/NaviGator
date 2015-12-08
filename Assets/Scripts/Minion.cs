@@ -15,6 +15,8 @@ public class Minion : MonoBehaviour {
 
     void Die()
     {
+        if (GameControl.control.TimeBasedScore == false)
+        GameControl.control.AddPoint(50);
         Destroy(gameObject);
     }
 }
